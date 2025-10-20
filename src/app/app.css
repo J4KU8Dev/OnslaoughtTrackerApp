@@ -1,0 +1,14 @@
+
+.wrapper{
+    background-image: url('/assets/onslaught_img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+}
+h1{
+    text-align: center;
+    font-size: 8rem;
+    color: rgba(89, 131, 252, 1);
+}
