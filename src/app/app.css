@@ -7,8 +7,17 @@
     width: 100%;
     min-height: 100vh;
 }
-h1{
-    text-align: center;
-    font-size: 8rem;
-    color: rgba(89, 131, 252, 1);
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3rem;
+}
+li{
+    background-color: rgba(255, 255, 255, 0.4);
+    color: rgb(74, 4, 155);
+    padding: 3rem;
+    border-radius: 25px 0px 25px 0px;
 }

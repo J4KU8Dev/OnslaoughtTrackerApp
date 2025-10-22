@@ -1,3 +1,11 @@
 <div class="wrapper">
-    <h1>Onslaught Stats</h1>
+    <app-header />
+    <ul>
+        @for (user of users; track $index) {
+            <li>
+                <app-user [user]="user" />
+            </li>
+        }
+    </ul>
+    
 </div>
