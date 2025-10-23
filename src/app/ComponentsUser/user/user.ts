@@ -1,4 +1,5 @@
-import { Component, input } from '@angular/core';
+import { Component, Input, input } from '@angular/core';
+import { userModel } from '../../user.model';
 
 @Component({
   selector: 'app-user',
@@ -7,5 +8,5 @@ import { Component, input } from '@angular/core';
   styleUrl: './user.css'
 })
 export class User {
-  user = input.required();
+  @Input({required: true}) user!:userModel;
 }

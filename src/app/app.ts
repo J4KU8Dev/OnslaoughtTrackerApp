@@ -1,14 +1,27 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Header } from "./header/header";
 import { User } from "./ComponentsUser/user/user";
+import { userModel } from './user.model';
+import { UserInfo } from "./ComponentsUser/user-info/user-info";
+import { UserService } from './ComponentsUser/user-service';
 
 @Component({
   selector: 'app-root',
-  imports: [Header, User],
+  imports: [Header, User, UserInfo],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('onslaugthTrackerApp');
-  users:string[] = ["Nie_Po_Sionym","Guuby_come_b4ck_ag4in","Markson67","betoon3"];
+  userService = inject(UserService);
+  selectedPlayer: string = "";
+  
+  get AllPlayers(){
+    return this.userService.onShowPlayers();
+  }
+
+  onSelectPlayer(id: string){
+    this.selectedPlayer = id;
+  }
 }
+
+  

@@ -20,4 +20,11 @@ li{
     color: rgb(74, 4, 155);
     padding: 3rem;
     border-radius: 25px 0px 25px 0px;
+    transition: ease-in-out 0.3s;
+}
+
+li:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 3.2rem;
+    color: black;
 }
