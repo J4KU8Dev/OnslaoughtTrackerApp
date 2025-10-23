@@ -1,5 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { UserService } from '../user-service';
+import { userModel } from '../../user.model';
 
 @Component({
   selector: 'app-user-info',
@@ -9,10 +10,8 @@ import { UserService } from '../user-service';
 })
 export class UserInfo {
   @Input({required: true}) id!: string;
-
+  @Input({required: true}) info!:userModel[];
+  
   user = inject(UserService);
 
-  getPlayerInfo(id: string){
-    
-  }
 }

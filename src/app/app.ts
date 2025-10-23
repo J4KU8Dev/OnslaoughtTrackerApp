@@ -14,13 +14,17 @@ import { UserService } from './ComponentsUser/user-service';
 export class App {
   userService = inject(UserService);
   selectedPlayer: string = "";
-  
+  playerInfo:any;
   get AllPlayers(){
     return this.userService.onShowPlayers();
   }
 
   onSelectPlayer(id: string){
     this.selectedPlayer = id;
+  }
+
+  onPlayerCard(id: string) {
+    return this.userService.onShowInfoAboutPlayer(id);
   }
 }
 
