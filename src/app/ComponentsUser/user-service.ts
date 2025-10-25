@@ -35,7 +35,7 @@ export class UserService {
     return this.users;
   }
 
-  onShowInfoAboutPlayer(id: string) {
+  onShowInfoAboutPlayer(id: string):userModel[] {
     return this.users.filter((el) => el.id === id );
   }
 }

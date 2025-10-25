@@ -10,8 +10,8 @@ import { userModel } from '../../user.model';
 })
 export class UserInfo {
   @Input({required: true}) id!: string;
-  @Input({required: true}) info!:userModel[];
+  @Input({required: true}) playerInfo!:userModel;
   
   user = inject(UserService);
-
+  
 }

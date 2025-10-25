@@ -1,7 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { Header } from "./header/header";
 import { User } from "./ComponentsUser/user/user";
-import { userModel } from './user.model';
 import { UserInfo } from "./ComponentsUser/user-info/user-info";
 import { UserService } from './ComponentsUser/user-service';
 
@@ -14,17 +13,17 @@ import { UserService } from './ComponentsUser/user-service';
 export class App {
   userService = inject(UserService);
   selectedPlayer: string = "";
-  playerInfo:any;
   get AllPlayers(){
     return this.userService.onShowPlayers();
   }
 
   onSelectPlayer(id: string){
     this.selectedPlayer = id;
+    console.log(this.selectedPlayer);
   }
 
-  onPlayerCard(id: string) {
-    return this.userService.onShowInfoAboutPlayer(id);
+  onPlayerCard(id: string){
+    return this.userService.users.find((user) => user.id === id)!;
   }
 }
 
