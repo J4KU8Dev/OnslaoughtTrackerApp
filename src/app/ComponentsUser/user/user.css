@@ -2,3 +2,7 @@
     font-size: 2rem;
     font-weight: 900;
 }
+.active{
+    color: rgba(89, 131, 252, 1);
+    transition: 0.5ms ease-in-out;
+}

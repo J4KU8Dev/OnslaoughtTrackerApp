@@ -3,7 +3,7 @@
     <ul>
         @for (user of AllPlayers; track $index) {
             <li (click)="onSelectPlayer(user.id)">
-                <app-user [user]="user" />
+                <app-user [user]="user" [selected]="user.id === selectedPlayer" />
             </li>
         }
     </ul>
@@ -11,6 +11,6 @@
         <app-user-info [id]="selectedPlayer" [playerInfo]="onPlayerCard(selectedPlayer)" /> 
     }
     @else{
-        <p>Please select player.</p>
+        <p class="optional">Please select player.</p>
     }
 </div>

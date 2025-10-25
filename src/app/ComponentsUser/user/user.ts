@@ -9,4 +9,5 @@ import { userModel } from '../../user.model';
 })
 export class User {
   @Input({required: true}) user!:userModel;
+  @Input({required: true}) selected: boolean = false;
 }
