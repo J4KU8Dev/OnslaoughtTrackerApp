@@ -3,6 +3,7 @@ import { Header } from "./header/header";
 import { User } from "./ComponentsUser/user/user";
 import { UserInfo } from "./ComponentsUser/user-info/user-info";
 import { UserService } from './ComponentsUser/user-service';
+import { userModel } from './user.model';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,10 @@ export class App {
   selectedPlayer: string = "";
   get AllPlayers(){
     return this.userService.onShowPlayers();
+  }
+
+  get Player(){
+    return this.userService.users.find((user) => user.id === this.selectedPlayer);
   }
 
   onSelectPlayer(id: string){
