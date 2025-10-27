@@ -38,3 +38,6 @@ li:hover{
     padding: 1.2rem;
     border-radius: 10px;
 }
+ag-charts{
+    flex: 1;
+}

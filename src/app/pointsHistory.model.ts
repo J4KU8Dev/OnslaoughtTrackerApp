@@ -1,5 +1,8 @@
 export interface pointsHistory {
     id: string;
-    points: number[];
+    days:{
+        day:number,
+        points:number;
+    }[];
     actualRank: string;
 }

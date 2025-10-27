@@ -11,7 +11,7 @@
         <app-user-info [id]="selectedPlayer" [playerInfo]="onPlayerCard(selectedPlayer)" />     
         <div class="points">
             <h2>{{Player?.nickname}}'s Points History</h2>
-            <!-- add here chart -->
+            <ag-charts style="height: 100%; width: 1000px;" [options]="chartOptions"></ag-charts> />
         </div>
     }
     @else{

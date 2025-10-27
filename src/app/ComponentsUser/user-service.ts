@@ -34,57 +34,163 @@ export class UserService {
     },
   ];
 
-  pointsHistory: pointsHistory[] = [
+  pointsHistory:pointsHistory[] = [
   {
     id: "p1",
-    points: [
-      1500, 1520, 1490, 1510, 1530, 1500, 1550, 1540, 1560, 1520,
-      1510, 1530, 1570, 1550, 1580, 1560, 1590, 1610, 1600, 1620,
-      1580, 1570, 1590, 1600, 1620, 1640, 1630, 1650, 1680, 1700
+    days: [
+      { day: 1, points: 1500 },
+      { day: 2, points: 1520 },
+      { day: 3, points: 1490 },
+      { day: 4, points: 1510 },
+      { day: 5, points: 1530 },
+      { day: 6, points: 1500 },
+      { day: 7, points: 1550 },
+      { day: 8, points: 1540 },
+      { day: 9, points: 1560 },
+      { day: 10, points: 1520 },
+      { day: 11, points: 1510 },
+      { day: 12, points: 1530 },
+      { day: 13, points: 1570 },
+      { day: 14, points: 1550 },
+      { day: 15, points: 1580 },
+      { day: 16, points: 1560 },
+      { day: 17, points: 1590 },
+      { day: 18, points: 1610 },
+      { day: 19, points: 1600 },
+      { day: 20, points: 1620 },
+      { day: 21, points: 1580 },
+      { day: 22, points: 1570 },
+      { day: 23, points: 1590 },
+      { day: 24, points: 1600 },
+      { day: 25, points: 1620 },
+      { day: 26, points: 1640 },
+      { day: 27, points: 1630 },
+      { day: 28, points: 1650 },
+      { day: 29, points: 1680 },
+      { day: 30, points: 1700 },
     ],
     actualRank: "Gold",
   },
   {
     id: "p2",
-    points: [
-      1200, 1220, 1210, 1180, 1190, 1170, 1150, 1180, 1190, 1210,
-      1230, 1200, 1220, 1210, 1190, 1170, 1180, 1160, 1150, 1170,
-      1180, 1200, 1190, 1210, 1230, 1240, 1220, 1250, 1270, 1260
+    days: [
+      { day: 1, points: 1200 },
+      { day: 2, points: 1220 },
+      { day: 3, points: 1210 },
+      { day: 4, points: 1180 },
+      { day: 5, points: 1190 },
+      { day: 6, points: 1170 },
+      { day: 7, points: 1150 },
+      { day: 8, points: 1180 },
+      { day: 9, points: 1190 },
+      { day: 10, points: 1210 },
+      { day: 11, points: 1230 },
+      { day: 12, points: 1200 },
+      { day: 13, points: 1220 },
+      { day: 14, points: 1210 },
+      { day: 15, points: 1190 },
+      { day: 16, points: 1170 },
+      { day: 17, points: 1180 },
+      { day: 18, points: 1160 },
+      { day: 19, points: 1150 },
+      { day: 20, points: 1170 },
+      { day: 21, points: 1180 },
+      { day: 22, points: 1200 },
+      { day: 23, points: 1190 },
+      { day: 24, points: 1210 },
+      { day: 25, points: 1230 },
+      { day: 26, points: 1240 },
+      { day: 27, points: 1220 },
+      { day: 28, points: 1250 },
+      { day: 29, points: 1270 },
+      { day: 30, points: 1260 },
     ],
     actualRank: "Silver",
   },
   {
     id: "p3",
-    points: [
-      800, 820, 850, 870, 840, 860, 830, 850, 880, 890,
-      910, 940, 920, 930, 910, 890, 870, 880, 860, 880,
-      900, 930, 950, 940, 960, 970, 950, 980, 1000, 1020
+    days: [
+      { day: 1, points: 800 },
+      { day: 2, points: 820 },
+      { day: 3, points: 850 },
+      { day: 4, points: 870 },
+      { day: 5, points: 840 },
+      { day: 6, points: 860 },
+      { day: 7, points: 830 },
+      { day: 8, points: 850 },
+      { day: 9, points: 880 },
+      { day: 10, points: 890 },
+      { day: 11, points: 910 },
+      { day: 12, points: 940 },
+      { day: 13, points: 920 },
+      { day: 14, points: 930 },
+      { day: 15, points: 910 },
+      { day: 16, points: 890 },
+      { day: 17, points: 870 },
+      { day: 18, points: 880 },
+      { day: 19, points: 860 },
+      { day: 20, points: 880 },
+      { day: 21, points: 900 },
+      { day: 22, points: 930 },
+      { day: 23, points: 950 },
+      { day: 24, points: 940 },
+      { day: 25, points: 960 },
+      { day: 26, points: 970 },
+      { day: 27, points: 950 },
+      { day: 28, points: 980 },
+      { day: 29, points: 1000 },
+      { day: 30, points: 1020 },
     ],
     actualRank: "Bronze",
   },
   {
     id: "p4",
-    points: [
-      2000, 1980, 2010, 1990, 2030, 2050, 2070, 2080, 2060, 2090,
-      2120, 2100, 2140, 2130, 2110, 2140, 2160, 2150, 2170, 2160,
-      2190, 2170, 2200, 2230, 2250, 2220, 2240, 2260, 2280, 2300
+    days: [
+      { day: 1, points: 2000 },
+      { day: 2, points: 1980 },
+      { day: 3, points: 2010 },
+      { day: 4, points: 1990 },
+      { day: 5, points: 2030 },
+      { day: 6, points: 2050 },
+      { day: 7, points: 2070 },
+      { day: 8, points: 2080 },
+      { day: 9, points: 2060 },
+      { day: 10, points: 2090 },
+      { day: 11, points: 2120 },
+      { day: 12, points: 2100 },
+      { day: 13, points: 2140 },
+      { day: 14, points: 2130 },
+      { day: 15, points: 2110 },
+      { day: 16, points: 2140 },
+      { day: 17, points: 2160 },
+      { day: 18, points: 2150 },
+      { day: 19, points: 2170 },
+      { day: 20, points: 2160 },
+      { day: 21, points: 2190 },
+      { day: 22, points: 2170 },
+      { day: 23, points: 2200 },
+      { day: 24, points: 2230 },
+      { day: 25, points: 2250 },
+      { day: 26, points: 2220 },
+      { day: 27, points: 2240 },
+      { day: 28, points: 2260 },
+      { day: 29, points: 2280 },
+      { day: 30, points: 2300 },
     ],
     actualRank: "Champion",
-  }
+  },
 ];
+
 
   onShowPlayers() {
     return this.users;
   }
 
-  onShowInfoAboutPlayer(id: string):userModel[] {
-    return this.users.filter((el) => el.id === id );
+  onShowInfoAboutPlayer(id: string): userModel[] {
+    return this.users.filter((el) => el.id === id);
   }
-  getPlayerPoints(id: string) {
-    this.points = this.pointsHistory.find(user => user.id === id)?.points || [];
-    console.log(this.points);
-    return this.points;
-    
+  onGetPlayerPoints(id: string) {
+    console.log(this.pointsHistory.find(p => p.id === id)?.days ?? [])
+    return this.pointsHistory.find((object) => object.id === id)?.days;
   }
-
 }
