@@ -19,15 +19,28 @@ export class App implements OnInit {
   public chartOptions!: AgChartOptions;
    ngOnInit() {
     const data = this.userService.onGetPlayerPoints(this.selectedPlayer) ?? [];
-    console.log('Dane do wykresu:', data);
     this.chartOptions = {
       data,
-      series: [{ type: 'line', xKey: 'day', yKey: 'points' }]
+      series: [{ type: 'line', xKey: 'day', yKey: 'points', marker: {
+                size: 5,
+                stroke: 'rgba(89, 131, 252, 1)',
+                strokeWidth: 5,
+                shape: 'circle',
+            },
+            interpolation: {
+                type: 'smooth',
+            }, },
+          ],
+      background: {
+        fill: 'rgba(255, 255, 255, 1)',
+      },
+      
     };
   }
 
   userService = inject(UserService);
   selectedPlayer: string = "";
+
   get AllPlayers(){
     return this.userService.onShowPlayers();
   }
@@ -38,13 +51,7 @@ export class App implements OnInit {
 
   onSelectPlayer(id: string) {
     this.selectedPlayer = id;
-
-    // 🔹 Pobierz dane z serwisu
     const data = this.userService.onGetPlayerPoints(id) ?? [];
-
-    console.log('✅ Dane do wykresu:', data);
-
-    // 🔹 Uaktualnij wykres (ważne: tworzymy nowy obiekt!)
     this.chartOptions = {
       ...this.chartOptions,
       data
@@ -55,5 +62,3 @@ export class App implements OnInit {
     return this.userService.users.find((user) => user.id === id)!;
   }
 }
-
-  
